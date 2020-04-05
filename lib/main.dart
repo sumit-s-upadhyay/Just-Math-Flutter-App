@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:just_math/UI/HomePage.dart';
+import 'package:just_math/UI/DashboardPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.redAccent,
       ),
-      home: HomePage(),
+      home: Dashboard(),
     );
   }
 }
