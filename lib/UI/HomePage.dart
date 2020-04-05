@@ -13,26 +13,34 @@ class _HomePageState extends State<HomePage> {
   var operatortext;
   _HomePageState(this.operatortext);
 
-  checklevel(String text) { 
+  checklevel(String text) {
     switch (text) {
       case "Eassy Lavel":
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => QuestionPage(1, 10,operatortext)));
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => QuestionPage(1, 10, operatortext)));
         break;
 
       case "Intermediate Lavel":
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => QuestionPage(11, 99,operatortext)));
-        break; 
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => QuestionPage(11, 50, operatortext)));
+        break;
 
       case "Advance Lavel":
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => QuestionPage(101, 999,operatortext)));
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => QuestionPage(51, 100, operatortext)));
         break;
 
       case "Expert Lavel":
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => QuestionPage(1001, 10000,operatortext)));
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => QuestionPage(101, 1000, operatortext)));
         break;
     }
   }
@@ -57,6 +65,12 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
     );
+  }
+
+  void setState(fn) {
+    if (mounted) {
+      super.setState(fn);
+    }
   }
 
   @override
